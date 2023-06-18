@@ -1,0 +1,58 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <SilkVersion>2.17.1-build3398.0</SilkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="JetBrains.Annotations">
+      <Version>2023.2.0-eap3</Version>
+    </PackageVersion>
+    <PackageVersion Include="libclang">
+      <Version>15.0.0</Version>
+    </PackageVersion>
+    <PackageVersion Include="libClangSharp">
+      <Version>15.0.0</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp" Version="4.6.0-1.final" />
+    <PackageVersion Include="Microsoft.Extensions.Configuration">
+      <Version>8.0.0-preview.3.23174.8</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.Extensions.Configuration.EnvironmentVariables">
+      <Version>8.0.0-preview.3.23174.8</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.Extensions.Http">
+      <Version>8.0.0-preview.5.23280.8</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.Extensions.Http.Polly">
+      <Version>8.0.0-preview.5.23302.2</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.Extensions.Logging">
+      <Version>8.0.0-preview.3.23174.8</Version>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.Extensions.Logging.Console">
+      <Version>8.0.0-preview.3.23174.8</Version>
+    </PackageVersion>
+    <PackageVersion Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageVersion>
+    <PackageVersion Include="System.Text.Json" Version="8.0.0-preview.5.23280.8" />
+    <PackageVersion Include="System.Threading.RateLimiting">
+      <Version>8.0.0-preview.5.23280.8</Version>
+    </PackageVersion>
+    <PackageVersion Include="ThisAssembly">
+      <Version>1.2.15</Version>
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageVersion>
+    <PackageVersion Include="DotNet.ReproducibleBuilds" Version="1.1.1" />
+    <PackageVersion Include="NuGetizer">
+      <Version>1.0.4</Version>
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageVersion>
+    <PackageVersion Include="Nerdbank.GitVersioning">
+      <Version>3.6.128</Version>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageVersion>
+  </ItemGroup>
+</Project>
