@@ -11,7 +11,7 @@ public static class DiscordPolicies
         HttpPolicyExtensions.HandleTransientHttpError()
             .OrResult(m => m.StatusCode is HttpStatusCode.TooManyRequests)
             .WaitAndRetryAsync(6, (i, result, _) => {
-                RetryConditionHeaderValue retryAfter = result.Result.Headers.RetryAfter ?? new RetryConditionHeaderValue(TimeSpan.FromSeconds(1 << i));
-                return retryAfter.Delta ?? retryAfter.Date - DateTimeOffset.UtcNow ?? TimeSpan.FromSeconds(1 << i);
+                RetryConditionHeaderValue? retryAfter = result.Result.Headers.RetryAfter;
+                return retryAfter?.Delta ?? retryAfter?.Date - DateTimeOffset.UtcNow ?? TimeSpan.FromSeconds(1 << i);
             }, (_, _, _, _) => Task.CompletedTask);
 }

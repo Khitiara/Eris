@@ -1,9 +1,14 @@
 <Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
-    <SilkVersion>2.17.1-build3398.0</SilkVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageVersion Include="FluentAssertions">
+      <Version>6.11.0</Version>
+    </PackageVersion>
+    <PackageVersion Include="FluentAssertions.Analyzers">
+      <Version>0.20.0</Version>
+    </PackageVersion>
     <PackageVersion Include="JetBrains.Annotations">
       <Version>2023.2.0-eap3</Version>
     </PackageVersion>
@@ -51,7 +56,20 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageVersion>
     <PackageVersion Include="Nerdbank.GitVersioning">
-      <Version>3.6.128</Version>
+      <Version>3.6.133</Version>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageVersion>
+    <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.7.0-preview.23280.1" />
+    <PackageVersion Include="xunit">
+      <Version>2.4.2</Version>
+    </PackageVersion>
+    <PackageVersion Include="xunit.runner.visualstudio">
+      <Version>2.4.5</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageVersion>
+    <PackageVersion Include="coverlet.collector" Version="6.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageVersion>
   </ItemGroup>

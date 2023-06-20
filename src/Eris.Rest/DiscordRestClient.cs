@@ -8,7 +8,7 @@ public sealed class DiscordRestClient : IDisposable
 
     public DiscordRestClient(HttpClient client) {
         _client = client;
-        _client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Eris", ThisAssembly.AssemblyVersion));
+        _client.DefaultRequestHeaders.UserAgent.Add(new ProductInfoHeaderValue("Eris", ThisAssembly.Info.Version));
     }
 
     public DiscordRestClient(IHttpClientFactory clientFactory) {

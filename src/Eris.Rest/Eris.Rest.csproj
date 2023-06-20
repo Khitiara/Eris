@@ -2,6 +2,7 @@
 
     <ItemGroup>
         <InternalsVisibleTo Include="Eris.Gateway" />
+        <InternalsVisibleTo Include="RestUnitTests" Condition="'$(Configuration)'=='DEBUG'" />
     </ItemGroup>
 
     <ItemGroup>
