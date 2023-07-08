@@ -482,5 +482,5 @@ $RECYCLE.BIN/
 
 
 labs/
-ext/Orpheus.MiniAudio.Native/zig-cache
-ext/Orpheus.MiniAudio.Native/zig-out
+
+*.received.*

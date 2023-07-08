@@ -10,6 +10,21 @@
       <PackageReference Include="Microsoft.Extensions.Http.Polly" />
       <PackageReference Include="System.Net.Http" />
       <PackageReference Include="System.Text.Json" />
+      <PackageReference Include="System.Threading.RateLimiting" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="Models\Snowflake.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Models\SnowflakeJsonConverter.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
     </ItemGroup>
 
 </Project>

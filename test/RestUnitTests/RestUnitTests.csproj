@@ -5,7 +5,6 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
-        <IsPackable>false</IsPackable>
         <IsTestProject>true</IsTestProject>
     </PropertyGroup>
 
@@ -16,6 +15,8 @@
           <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
         <PackageReference Include="Microsoft.NET.Test.Sdk"/>
+        <PackageReference Include="Verify" />
+        <PackageReference Include="Verify.Xunit" />
         <PackageReference Include="xunit"/>
         <PackageReference Include="xunit.runner.visualstudio">
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -28,7 +29,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Eris.Rest\Eris.Rest.csproj" />
+      <ProjectReference Include="..\..\src\Eris.Rest\Eris.Rest.csproj" PrivateAssets="none"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include=".verification\SnowflakeTests.TestSnowflakeSerialization.verified.txt" />
     </ItemGroup>
 
 </Project>
