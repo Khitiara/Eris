@@ -8,6 +8,8 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.Http" />
       <PackageReference Include="Microsoft.Extensions.Http.Polly" />
+      <PackageReference Include="NodaTime" />
+      <PackageReference Include="NodaTime.Serialization.SystemTextJson" />
       <PackageReference Include="System.Net.Http" />
       <PackageReference Include="System.Text.Json" />
       <PackageReference Include="System.Threading.RateLimiting" />
@@ -20,7 +22,22 @@
         <DefaultPackFolder>content</DefaultPackFolder>
         <BuildAction>Compile</BuildAction>
       </Compile>
-      <Compile Update="Models\SnowflakeJsonConverter.cs">
+      <Compile Update="DiscordIntents.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Models\Converters\SnowflakeJsonConverter.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Models\Converters\InstantUnixMillisecondsConverter.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Models\Json\DiscordJsonContext.cs">
         <CodeLanguage>cs</CodeLanguage>
         <DefaultPackFolder>content</DefaultPackFolder>
         <BuildAction>Compile</BuildAction>

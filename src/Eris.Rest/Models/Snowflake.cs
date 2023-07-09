@@ -1,4 +1,6 @@
 ﻿using System.Text.Json.Serialization;
+using Eris.Rest.Models.Json;
+using NodaTime;
 
 namespace Eris.Rest.Models;
 
@@ -6,11 +8,11 @@ namespace Eris.Rest.Models;
 public readonly struct Snowflake(ulong snowflake)
     : IEquatable<Snowflake>, IComparable<Snowflake>, IComparable
 {
-    public static readonly DateTimeOffset DiscordEpoch = DateTimeOffset.FromUnixTimeMilliseconds(1420070400000L);
+    public static readonly Instant DiscordEpoch = Instant.FromUnixTimeMilliseconds(1420070400000L);
 
     public readonly ulong Value = snowflake;
 
-    public readonly DateTimeOffset Timestamp = DiscordEpoch + TimeSpan.FromMilliseconds(snowflake >> 22);
+    public readonly Instant Timestamp = DiscordEpoch + Duration.FromMilliseconds(snowflake >> 22);
 
     public readonly byte InternalWorkerId = (byte)((snowflake & 0x3E0000) >> 17);
 

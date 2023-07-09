@@ -5,6 +5,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Runtime.CompilerServices;
 using Eris.Rest.Models;
+using DiscordJsonContext = Eris.Rest.Models.Json.DiscordJsonContext;
 
 namespace Eris.Rest.RateLimiting;
 
