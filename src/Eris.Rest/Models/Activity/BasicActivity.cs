@@ -1,4 +1,4 @@
-namespace Eris.Rest.Models;
+namespace Eris.Rest.Models.Activity;
 
 public class BasicActivity
 {

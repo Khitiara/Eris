@@ -1,10 +1,10 @@
-namespace Eris.Rest.Models;
+namespace Eris.Rest.Models.Application;
 
 /// <summary>
 /// Represents flags for a discord application.
 /// </summary>
 public enum ApplicationFlags
-{   
+{
     /// <summary>
     /// Indicates if an application uses the Auto Moderation API.
     /// </summary>

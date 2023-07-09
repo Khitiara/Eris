@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Eris.Rest.Models;
+namespace Eris.Rest.Models.User;
 
 public class User
 {

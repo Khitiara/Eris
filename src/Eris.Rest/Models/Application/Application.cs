@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Eris.Rest.Models;
+namespace Eris.Rest.Models.Application;
 
 public sealed class Application
 {
@@ -27,9 +27,9 @@ public sealed class Application
     public IReadOnlyList<string>? RpcOrigins { get; init; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public User? Owner { get; init; }
+    public User.User? Owner { get; init; }
 
-    public Team? Team { get; init; }
+    public Team.Team? Team { get; init; }
 
     [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public ApplicationFlags Flags { get; init; }

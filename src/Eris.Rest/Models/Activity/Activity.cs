@@ -2,7 +2,7 @@ using System.Text.Json.Serialization;
 using Eris.Rest.Models.Json;
 using NodaTime;
 
-namespace Eris.Rest.Models;
+namespace Eris.Rest.Models.Activity;
 
 public class Activity : BasicActivity
 {

@@ -4,7 +4,7 @@ using System.Threading.RateLimiting;
 
 namespace Eris.Rest.RateLimiting;
 
-public class DiscordApiRateLimiter : PartitionedRateLimiter<LimitableDiscordApiRequest>
+public class DiscordApiRateLimiter : PartitionedRateLimiter<DiscordApiRateLimiter.BucketKey>
 {
     public readonly record struct BucketKey(string Method, string Route);
     
@@ -61,13 +61,13 @@ public class DiscordApiRateLimiter : PartitionedRateLimiter<LimitableDiscordApiR
             => $"{hash}:{guildId}:{channelId}:{webhookId}";
     }
 
-    public override RateLimiterStatistics? GetStatistics(LimitableDiscordApiRequest resource) =>
+    public override RateLimiterStatistics? GetStatistics(BucketKey resource) =>
         throw new NotImplementedException();
 
-    protected override RateLimitLease AttemptAcquireCore(LimitableDiscordApiRequest resource, int permitCount) =>
+    protected override RateLimitLease AttemptAcquireCore(BucketKey resource, int permitCount) =>
         throw new NotImplementedException();
 
-    protected override async ValueTask<RateLimitLease> AcquireAsyncCore(LimitableDiscordApiRequest resource,
+    protected override async ValueTask<RateLimitLease> AcquireAsyncCore(BucketKey resource,
         int permitCount, CancellationToken cancellationToken) => throw new NotImplementedException();
 
     internal void NotifyGlobalRateLimit(RateLimitingHeaders.RateLimitTriggerInfo info,
