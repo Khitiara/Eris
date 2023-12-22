@@ -1,0 +1,15 @@
+<Project>
+    <Target Name="GitInfoStuff" DependsOnTargets="InitializeSourceControlInformation;$(SourceControlManagerUrlTranslationTargets)">
+        <PropertyGroup Condition="'$(SourceControlInformationFeatureSupported)' == 'true'">
+            <!-- The project must specify PublishRepositoryUrl=true in order to publish the URL, in order to prevent inadvertent leak of internal URL. -->
+            <_ProjectRepositoryUrl Condition="'$(PublishRepositoryUrl)' == 'true'">$(PrivateRepositoryUrl)</_ProjectRepositoryUrl>
+        </PropertyGroup>
+    </Target>
+    <Target Name="ExtraThisAssemblyProps" DependsOnTargets="GetBuildVersion;GitInfoStuff" BeforeTargets="GenerateAssemblyNBGVVersionInfo">
+        <ItemGroup>
+            <AdditionalThisAssemblyFields Include="VersionThreeComponent" String="$(BuildVersion3Components)"/>
+            <AdditionalThisAssemblyFields Include="RepositoryUrl" String="$(_ProjectRepositoryUrl).git"/>
+            <AdditionalThisAssemblyFields Include="ProjectUrl" String="$(_ProjectRepositoryUrl)"/>
+        </ItemGroup>
+    </Target>
+</Project>

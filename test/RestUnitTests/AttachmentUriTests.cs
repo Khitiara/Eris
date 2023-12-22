@@ -1,5 +1,7 @@
 using Eris.Rest;
+using Eris.Rest.Internal;
 using FluentAssertions;
+using AttachmentUriParser = Eris.Rest.Internal.AttachmentUriParser;
 
 namespace RestUnitTests;
 

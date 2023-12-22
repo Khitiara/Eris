@@ -13,3 +13,13 @@ public sealed class InstantUnixMillisecondsConverter : JsonConverter<Instant>
         writer.WriteNumberValue(value.ToUnixTimeMilliseconds());
     }
 }
+
+public sealed class DurationMillisConverter : JsonConverter<Duration>
+{
+    public override Duration Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) =>
+        Duration.FromMilliseconds(reader.GetInt64());
+
+    public override void Write(Utf8JsonWriter writer, Duration value, JsonSerializerOptions options) {
+        writer.WriteNumberValue((long)value.TotalMilliseconds);
+    }
+}

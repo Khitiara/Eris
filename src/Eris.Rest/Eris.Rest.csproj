@@ -6,10 +6,15 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="gfoidl.Base64" />
+      <PackageReference Include="Microsoft.AspNetCore.WebUtilities" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
       <PackageReference Include="Microsoft.Extensions.Http" />
-      <PackageReference Include="Microsoft.Extensions.Http.Polly" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+      <PackageReference Include="Microsoft.Extensions.ObjectPool" />
       <PackageReference Include="NodaTime" />
       <PackageReference Include="NodaTime.Serialization.SystemTextJson" />
+      <PackageReference Include="Std.UriTemplate" />
       <PackageReference Include="System.Net.Http" />
       <PackageReference Include="System.Text.Json" />
       <PackageReference Include="System.Threading.RateLimiting" />
@@ -112,6 +117,42 @@
         <DefaultPackFolder>content</DefaultPackFolder>
         <BuildAction>Compile</BuildAction>
       </Compile>
+      <Compile Update="Models\Messages\Message.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Models\Channels\ChannelType.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Models\Channels\Channel.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Routing\Route.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Internal\AttachmentUriHandling.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+      <Compile Update="Internal\AttachmentUriParser.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
     </ItemGroup>
+
+
+
+
+
+
 
 </Project>

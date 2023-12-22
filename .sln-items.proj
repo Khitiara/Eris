@@ -4,6 +4,7 @@
     <Content Include=".github\CODEOWNERS" />
     <Content Include=".gitignore" />
     <Content Include="Directory.Build.props" />
+    <Content Include="Directory.Build.targets" />
     <Content Include="Directory.Packages.props" />
     <Content Include="global.json" />
     <Content Include="LICENSE" />

@@ -11,8 +11,20 @@
     </ItemGroup>
 
     <ItemGroup>
+      <PackageReference Include="Nerdbank.Streams" />
+      <PackageReference Include="System.Reactive.Async" />
       <PackageReference Include="System.Text.Json" />
       <PackageReference Include="System.Threading.RateLimiting" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Json\GatewayJsonContext.cs">
+        <CodeLanguage>cs</CodeLanguage>
+        <DefaultPackFolder>content</DefaultPackFolder>
+        <BuildAction>Compile</BuildAction>
+      </Compile>
+    </ItemGroup>
+
+
 
 </Project>

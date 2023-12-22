@@ -18,6 +18,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eris.Gateway", "src\Eris.Ga
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestUnitTests", "test\RestUnitTests\RestUnitTests.csproj", "{A02F400F-09EF-41F3-8A95-7B0330BD42B2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gen", "gen", "{7B3662F3-6A2F-4624-A192-5A01269E472F}"
+	ProjectSection(SolutionItems) = preProject
+		src\gen\Directory.Build.props = src\gen\Directory.Build.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayPayloadSerializationGenerator", "src\gen\GatewayPayloadSerializationGenerator\GatewayPayloadSerializationGenerator.csproj", "{AEFC5DB0-EF25-4339-BE9F-1C8D1439903C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,10 +47,16 @@ Global
 		{A02F400F-09EF-41F3-8A95-7B0330BD42B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A02F400F-09EF-41F3-8A95-7B0330BD42B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A02F400F-09EF-41F3-8A95-7B0330BD42B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEFC5DB0-EF25-4339-BE9F-1C8D1439903C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEFC5DB0-EF25-4339-BE9F-1C8D1439903C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEFC5DB0-EF25-4339-BE9F-1C8D1439903C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEFC5DB0-EF25-4339-BE9F-1C8D1439903C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F96A08A2-3A0B-4222-AC9B-E54684C960A6} = {CF2D443E-BB2E-4EDF-8F97-5AB2F42A8F97}
 		{CF4E5B05-AD97-4995-869C-9DB2E82F2EAC} = {CF2D443E-BB2E-4EDF-8F97-5AB2F42A8F97}
 		{A02F400F-09EF-41F3-8A95-7B0330BD42B2} = {E6FE4E73-0654-4257-9337-9F5D436CA47C}
+		{7B3662F3-6A2F-4624-A192-5A01269E472F} = {CF2D443E-BB2E-4EDF-8F97-5AB2F42A8F97}
+		{AEFC5DB0-EF25-4339-BE9F-1C8D1439903C} = {7B3662F3-6A2F-4624-A192-5A01269E472F}
 	EndGlobalSection
 EndGlobal

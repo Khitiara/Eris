@@ -11,9 +11,10 @@
                 <LangVersion>preview</LangVersion>
                 <EnablePreviewFeatures>true</EnablePreviewFeatures>
                 <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
+                <PublishRepositoryUrl>true</PublishRepositoryUrl>
             </PropertyGroup>
             <ItemGroup>
-                <PackageReference Include="ThisAssembly" />
+<!--                <PackageReference Include="ThisAssembly" />-->
                 <PackageReference Include="JetBrains.Annotations"/>
                 <PackageReference Include="NuGetizer" />
                 <PackageReference Include="Nerdbank.GitVersioning" Condition="!Exists('packages.config')">
